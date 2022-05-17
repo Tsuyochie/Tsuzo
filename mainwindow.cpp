@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //tim test
+
     QString Character_Name;
     QString Filepath;
     QStringList Character_Liste;
