@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //Bananenbrot test
+    //Kürbissaft test, hehe
 
     QString Character_Name;
     QString Filepath;
