@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "qframe.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,6 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->frame_2->setFrameStyle(QFrame::Panel);
     ui->frame_3->setFrameStyle(QFrame::Panel);
     ui->frame_4->setFrameStyle(QFrame::Panel);
+    ui->frame_5->setFrameStyle(QFrame::Panel);
+    ui->frame_6->setFrameStyle(QFrame::Panel);
+    ui->frame_8->setFrameStyle(QFrame::Panel);
 
     Character_Liste.append("NEUER_CHARAKTER");
 
@@ -29,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
         {
             while(query.next())
             {
-               Character_Liste.append(query.value(0).toString());
+                Character_Liste.append(query.value(0).toString());
             }
         }
     }
