@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->frame_4->setFrameStyle(QFrame::Panel);
     ui->frame_5->setFrameStyle(QFrame::Panel);
     ui->frame_6->setFrameStyle(QFrame::Panel);
-    ui->frame_8->setFrameStyle(QFrame::Panel);
+    ui->frame_7->setFrameStyle(QFrame::Panel);
 
     Character_Liste.append("NEUER_CHARAKTER");
 
