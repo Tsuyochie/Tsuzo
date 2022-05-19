@@ -2,6 +2,15 @@
 #include "ui_mainwindow.h"
 #include "qframe.h"
 
+/*
+ * Sachen die man im Kopf behalten sollte (Notebox):
+ * 1. Alles ausser Labels sollten einen custom Namen bekommen. Bsp: QLineEdit_3 -> Uebersicht_Profession_Line
+ *    Diese Beschriftung sollte nach folgendem Schema aufgebaut sein: REITERNAME_FELDNAME_OBJEKTTYP
+ * 2. Datengruppen (zB nach PDF Heldendokument Schema, wenn übernommen) sollten in einem QFrame sein, dass entsprechend bennant ist.
+ *    QFrame anschließend als FrameStyle Panel in mainwindow.cpp ab Zeile 24 gesetzt werden. Bsp: ui->Charakter_Basisdaten->setFrameStyle(QFrame::Panel)
+ *    Hierbei ist das QFrame Objekt nach dem "ui->" einzutragen.
+ * 3. Vor dem Commiten, sollte im Designer der erste Reiter (Uebersicht) ausgewält sein, da der ausgewählte Reiter als standard Ansicht gespeichert wird.
+*/
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,13 +24,15 @@ MainWindow::MainWindow(QWidget *parent)
     QStringList Character_daten;
     bool ok = false;
 
-    ui->frame->setFrameStyle(QFrame::Panel);
-    ui->frame_2->setFrameStyle(QFrame::Panel);
-    ui->frame_3->setFrameStyle(QFrame::Panel);
-    ui->frame_4->setFrameStyle(QFrame::Panel);
-    ui->frame_5->setFrameStyle(QFrame::Panel);
-    ui->frame_6->setFrameStyle(QFrame::Panel);
-    ui->frame_7->setFrameStyle(QFrame::Panel);
+    ui->Charakter_Basisdaten->setFrameStyle(QFrame::Panel);
+    ui->Charakter_beschreibende_Daten->setFrameStyle(QFrame::Panel);
+    ui->Charakter_soziale_Daten->setFrameStyle(QFrame::Panel);
+    ui->Charakter_Vorteile_Nachteile->setFrameStyle(QFrame::Panel);
+
+    ui->Basiseigenschaften->setFrameStyle(QFrame::Panel);
+    ui->Berechnete_Eigenschaften->setFrameStyle(QFrame::Panel);
+    ui->Sonderfertigkeiten->setFrameStyle(QFrame::Panel);
+
 
     Character_Liste.append("NEUER_CHARAKTER");
 
