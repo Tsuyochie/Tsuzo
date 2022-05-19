@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1033</width>
-    <height>642</height>
+    <width>1038</width>
+    <height>647</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,13 +27,13 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="Uebersicht">
      <attribute name="title">
       <string>Übersicht</string>
      </attribute>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="Charakter_Basisdaten">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -54,7 +54,7 @@
       <property name="midLineWidth">
        <number>0</number>
       </property>
-      <widget class="QLineEdit" name="Uebersicht_Professionr_Line">
+      <widget class="QLineEdit" name="Uebersicht_Profession_Line">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -156,7 +156,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_2">
+     <widget class="QFrame" name="Charakter_beschreibende_Daten">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -339,7 +339,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="widget" native="true">
+     <widget class="QWidget" name="Uebersicht_Character_Bild" native="true">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -352,7 +352,7 @@
        <string notr="true">QWidget.widget {background-iamge: url(./Jura.png)};</string>
       </property>
      </widget>
-     <widget class="QFrame" name="frame_3">
+     <widget class="QFrame" name="Charakter_soziale_Daten">
       <property name="geometry">
        <rect>
         <x>680</x>
@@ -460,7 +460,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_4">
+     <widget class="QFrame" name="Charakter_Vorteile_Nachteile">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -523,16 +523,16 @@
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="Eigenschaften">
      <attribute name="title">
       <string>Eigenschaften</string>
      </attribute>
-     <widget class="QFrame" name="frame_5">
+     <widget class="QFrame" name="Basiseigenschaften">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>381</width>
+        <width>501</width>
         <height>251</height>
        </rect>
       </property>
@@ -623,7 +623,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Gewandheit</string>
+        <string>Gewandtheit</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_23">
@@ -801,7 +801,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Mut_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>10</y>
          <width>31</width>
          <height>22</height>
@@ -814,7 +814,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Klugheit_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>40</y>
          <width>31</width>
          <height>21</height>
@@ -827,7 +827,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Intuition_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>70</y>
          <width>31</width>
          <height>22</height>
@@ -840,7 +840,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Charisma_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>100</y>
          <width>31</width>
          <height>22</height>
@@ -853,7 +853,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Fingerfertigkeit_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>130</y>
          <width>31</width>
          <height>22</height>
@@ -863,10 +863,10 @@
         <string>SE</string>
        </property>
       </widget>
-      <widget class="QCheckBox" name="Eigenschaften_Gewandheit_checkBox">
+      <widget class="QCheckBox" name="Eigenschaften_Gewandtheit_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>160</y>
          <width>31</width>
          <height>21</height>
@@ -879,7 +879,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Konstitution_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>190</y>
          <width>31</width>
          <height>22</height>
@@ -892,7 +892,7 @@
       <widget class="QCheckBox" name="Eigenschaften_Koerperkraft_checkBox">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>230</x>
          <y>220</y>
          <width>31</width>
          <height>22</height>
@@ -905,7 +905,7 @@
       <widget class="QPushButton" name="Eigenschaften_Mut_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>10</y>
          <width>71</width>
          <height>21</height>
@@ -918,7 +918,7 @@
       <widget class="QPushButton" name="Eigenschaften_Klugheit_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>40</y>
          <width>71</width>
          <height>21</height>
@@ -931,7 +931,7 @@
       <widget class="QPushButton" name="Eigenschaften_Intuition_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>70</y>
          <width>71</width>
          <height>21</height>
@@ -944,7 +944,7 @@
       <widget class="QPushButton" name="Eigenschaften_Charisma_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>100</y>
          <width>71</width>
          <height>21</height>
@@ -957,7 +957,7 @@
       <widget class="QPushButton" name="Eigenschaften_Fingerfertigkeit_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>130</y>
          <width>71</width>
          <height>21</height>
@@ -967,10 +967,10 @@
         <string>Steigern</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="Eigenschaften_Gewandheit_Button">
+      <widget class="QPushButton" name="Eigenschaften_Gewandtheit_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>160</y>
          <width>71</width>
          <height>21</height>
@@ -983,7 +983,7 @@
       <widget class="QPushButton" name="Eigenschaften_Konstitution_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>190</y>
          <width>71</width>
          <height>21</height>
@@ -996,7 +996,7 @@
       <widget class="QPushButton" name="Eigenschaften_Koerperkraft_Button">
        <property name="geometry">
         <rect>
-         <x>210</x>
+         <x>270</x>
          <y>220</y>
          <width>71</width>
          <height>21</height>
@@ -1009,7 +1009,7 @@
       <widget class="QLabel" name="Eigenschaften_Mut_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>10</y>
          <width>81</width>
          <height>21</height>
@@ -1022,7 +1022,7 @@
       <widget class="QLabel" name="Eigenschaften_Klugheit_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>40</y>
          <width>81</width>
          <height>21</height>
@@ -1035,7 +1035,7 @@
       <widget class="QLabel" name="Eigenschaften_Intuition_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>70</y>
          <width>81</width>
          <height>21</height>
@@ -1048,7 +1048,7 @@
       <widget class="QLabel" name="Eigenschaften_Charisma_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>100</y>
          <width>81</width>
          <height>21</height>
@@ -1061,7 +1061,7 @@
       <widget class="QLabel" name="Eigenschaften_Fingerfertigkeit_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>130</y>
          <width>81</width>
          <height>21</height>
@@ -1071,10 +1071,10 @@
         <string>AP_REQ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="Eigenschaften_Gewandheit_AP_Label">
+      <widget class="QLabel" name="Eigenschaften_Gewandtheit_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>160</y>
          <width>81</width>
          <height>21</height>
@@ -1087,7 +1087,7 @@
       <widget class="QLabel" name="Eigenschaften_Konstitution_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>190</y>
          <width>81</width>
          <height>21</height>
@@ -1100,7 +1100,7 @@
       <widget class="QLabel" name="Eigenschaften_Koerperkraft_AP_Label">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>350</x>
          <y>220</y>
          <width>81</width>
          <height>21</height>
@@ -1110,13 +1110,117 @@
         <string>AP_REQ</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="Eigenschaften_Mut_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>10</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Klugheit_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>40</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Intuition_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>70</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Charisma_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>100</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Fingerfertigkeit_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>130</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Gewandtheit_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>160</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Konstitution_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>190</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Eigenschaften_Koerperkraft_Wuerfeln_Button">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>220</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Würfeln</string>
+       </property>
+      </widget>
      </widget>
-     <widget class="QFrame" name="frame_6">
+     <widget class="QFrame" name="Berechnete_Eigenschaften">
       <property name="geometry">
        <rect>
-        <x>640</x>
+        <x>520</x>
         <y>10</y>
-        <width>381</width>
+        <width>501</width>
         <height>311</height>
        </rect>
       </property>
@@ -1596,7 +1700,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_7">
+     <widget class="QFrame" name="Sonderfertigkeiten">
       <property name="geometry">
        <rect>
         <x>9</x>
@@ -1636,9 +1740,9 @@
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="Talente">
      <attribute name="title">
-      <string>Seite</string>
+      <string>Talente</string>
      </attribute>
     </widget>
    </widget>
@@ -1648,7 +1752,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1033</width>
+     <width>1038</width>
      <height>17</height>
     </rect>
    </property>
