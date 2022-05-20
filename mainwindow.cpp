@@ -24,15 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     QStringList Character_daten;
     bool ok = false;
 
-    ui->Charakter_Basisdaten->setFrameStyle(QFrame::Panel);
-    ui->Charakter_beschreibende_Daten->setFrameStyle(QFrame::Panel);
-    ui->Charakter_soziale_Daten->setFrameStyle(QFrame::Panel);
-    ui->Charakter_Vorteile_Nachteile->setFrameStyle(QFrame::Panel);
-
-    ui->Basiseigenschaften->setFrameStyle(QFrame::Panel);
-    ui->Berechnete_Eigenschaften->setFrameStyle(QFrame::Panel);
-    ui->Sonderfertigkeiten->setFrameStyle(QFrame::Panel);
-
+    ui->centralwidget->setStyleSheet("QFrame {border-width: 1; border-style: solid; border-color: rgb(10, 10, 10)}"
+                                         "QLabel {border-width: 0}");
 
     Character_Liste.append("NEUER_CHARAKTER");
 
@@ -63,7 +56,7 @@ MainWindow::MainWindow(QWidget *parent)
             ui->Uebersicht_Character_Name_Line->setText(Character_daten.at(0));
             ui->Uebersicht_Rasse_Line->setText(Character_daten.at(1));
             ui->Uebersicht_Kultur_Line->setText(Character_daten.at(2));
-            ui->Uebersicht_Professionr_Line->setText(Character_daten.at(3));
+            ui->Uebersicht_Profession_Line->setText(Character_daten.at(3));
             ui->Uebersicht_Geschlecht_Line->setText(Character_daten.at(4));
             ui->Uebersicht_Alter_Line->setText(Character_daten.at(5));
             ui->Uebersicht_Groesse_Line->setText(Character_daten.at(6));
@@ -78,7 +71,7 @@ MainWindow::MainWindow(QWidget *parent)
             Filepath = Character_daten.at(15);
             Filepath.replace("\\","/");
             qDebug() << Filepath;
-            ui->widget->setStyleSheet("QWidget {image: url("+Filepath+") center center fixed;}");
+            ui->Uebersicht_Character_Bild->setStyleSheet("QWidget {image: url("+Filepath+") center center fixed;}");
         }
     }
 }
