@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     QString Filepath;
     QStringList Character_Liste;
     QStringList Character_daten;
+    int CID = 0;
     bool ok = false;
 
     ui->centralwidget->setStyleSheet("QFrame {border-width: 1; border-style: solid; border-color: rgb(10, 10, 10)}"
@@ -48,11 +49,10 @@ MainWindow::MainWindow(QWidget *parent)
     if(Character_Name != "NEUER_CHARAKTER")
     {
         query.clear();
-        if(query.exec("SELECT \"Name\",  \"Rasse\",  \"Kultur\",  \"Profession\",  \"Geschlecht\",  \"Alter\",  \"Groesse\",  \"Gewicht\",  \"Haarfarbe\",  \"Augenfarbe\", \"Aussehen\",  \"Stand\",  \"Titel\",  \"Sozialstatus\", \"Hintergrund\", \"Characterbild\" FROM Uebersicht WHERE Name='"+Character_Name+"';"))        {
+        if(query.exec("SELECT \"Name\",  \"Rasse\",  \"Kultur\",  \"Profession\",  \"Geschlecht\",  \"Alter\",  \"Groesse\",  \"Gewicht\",  \"Haarfarbe\",  \"Augenfarbe\", \"Aussehen\",  \"Stand\",  \"Titel\",  \"Sozialstatus\", \"Hintergrund\", \"Characterbild\", \"CID\" FROM Uebersicht WHERE Name='"+Character_Name+"';"))        {
             query.first();
-            for(int i = 0;i<16;i++)
+            for(int i = 0;i<17;i++)
                 Character_daten.append(query.value(i).toString());
-            qDebug() << Character_daten.join(",");
             ui->Uebersicht_Character_Name_Line->setText(Character_daten.at(0));
             ui->Uebersicht_Rasse_Line->setText(Character_daten.at(1));
             ui->Uebersicht_Kultur_Line->setText(Character_daten.at(2));
@@ -69,9 +69,25 @@ MainWindow::MainWindow(QWidget *parent)
             ui->Uebersicht_Sozialstatus_Line->setText(Character_daten.at(13));
             ui->Uebersicht_Hintergrund_Text->setText(Character_daten.at(14));
             Filepath = Character_daten.at(15);
+            CID = Character_daten.at(16).toInt();
             Filepath.replace("\\","/");
-            qDebug() << Filepath;
             ui->Uebersicht_Character_Bild->setStyleSheet("QWidget {image: url("+Filepath+") center center fixed;}");
+        }
+        Character_daten.clear();
+        query.clear();
+        if(query.exec("SELECT \"Mut\", \"Klugheit\", \"Intuition\", \"Charisma\", \"Fingerfertigkeit\", \"Gewandtheit\", \"Konstitution\", \"Koerperkraft\" FROM Eigenschaften WHERE CID='"+QString::number(CID)+"';"))
+        {
+            query.first();
+            for(int i = 0;i<8;i++)
+                Character_daten.append(query.value(i).toString());
+            ui->Eigenschaft_Mut_Line->setText(Character_daten.at(0));
+            ui->Eigenschaft_Klugheit_Line->setText(Character_daten.at(1));
+            ui->Eigenschaft_Intuition_Line->setText(Character_daten.at(2));
+            ui->Eigenschaft_Charisma_Line->setText(Character_daten.at(3));
+            ui->Eigenschaft_Fingerfertigkeit_Line->setText(Character_daten.at(4));
+            ui->Eigenschaft_Gewandheit_Line->setText(Character_daten.at(5));
+            ui->Eigenschaft_Konstitution_Line->setText(Character_daten.at(6));
+            ui->Eigenschaft_Koerperkraft_Line->setText(Character_daten.at(7));
         }
     }
 }
